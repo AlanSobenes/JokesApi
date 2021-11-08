@@ -29,7 +29,7 @@ module.exports = {
                 .catch(err => res.json ({ message: "Something went Wrong", error: err}))
         },
             
-            deleteJoke: (req, res) =>{
+        deleteJoke: (req, res) =>{
                 Joke.findByIdAndDelete(req.params.id)
                 .then(result => res.json({ result: result }))
                 .catch(err => res.json ({ message: "Something went Wrong", error: err}))
